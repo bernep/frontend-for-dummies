@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html lang="en">
+	<head>
+		<title>Frontend for Dummies</title>
+
+		<!-- Our CSS style sheets -->
+		<link rel="stylesheet" type="text/css" href="style/progress.css"></link>
+
+		<!-- Also use Bootstrap CSS for styling and elements. See https://getbootstrap.com/docs/3.3/css/ for details\ -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+	</head>
+
+	<body>
+		<div class ="row">
+			<div class="column">
+				<h2 id="column-title-1">This is column 1</h2>
+			</div>
+			<div class="column">
+				<h2 id="column-title-2">This is column 2</h2>
+			</div>
+		</div>
+		<div class = "row">
+			<div class="column">
+				<button 
+					type="button" onclick="document.getElementById('column-title-1').innerHTML = Date()">
+					Click me to display Date and Time.
+				</button>
+			</div>
+			<div class="column">
+				 <div onmouseenter="hoverOver()" onmouseleave="hoverAway()">
+				 	Move the cursor over me!
+				 </div> 
+			</div>
+		</div>
+	</body>
+<!--
+	<footer>
+		Frontend for Dummies | Presented by
+		<a href="https://rcos.io/">RCOS</a>
+		<label class="switch">
+			<input type="checkbox" id="themeSwitch" onclick="toggleTheme()">
+		</label>
+	</footer> -->
+
+	<!-- Bootstrap version of our footer -->
+
+	<footer class="py-3 text-secondary">
+        Frontend for Dummies | Presented by
+		<a href="https://rcos.io/">RCOS</a>
+		Version <code>420.69</code>
+        <label class="switch">
+			<input type="checkbox" id="themeSwitch" onclick="toggleTheme()">
+		</label>
+    </footer>
+
+	<!-- Oh yeah, it's Javascript time -->
+	<script src="js/index.js"></script>
+</html>
